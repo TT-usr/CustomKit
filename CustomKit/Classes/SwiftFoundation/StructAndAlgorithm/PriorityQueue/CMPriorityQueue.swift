@@ -1,8 +1,9 @@
 //
-//  MMSPriorityQueue.swift
-//  MMSBaseFoundation
+//  CMPriorityQueue.swift
+//  CustomKit
 //
-//  Created by Jack on 2021/2/7.
+//  Created by yao.tiancheng on 04/17/2022.
+//  Copyright (c) 2022 yao.tiancheng. All rights reserved.
 //
 
 import Foundation
@@ -15,11 +16,11 @@ public struct CMPriorityQueue<Element: Comparable> {
         self.init(ordered: ascending ? { $0 > $1 } : { $0 < $1 }, startingValues: startingValues)
     }
     
-    /// Creates a new MMSPriorityQueue with the given ordering.
+    /// Creates a new CMPriorityQueue with the given ordering.
     ///
     /// - parameter order: A function that specifies whether its first argument should
-    ///                    come after the second argument in the MMSPriorityQueue.
-    /// - parameter startingValues: An array of elements to initialize the MMSPriorityQueue with.
+    ///                    come after the second argument in the CMPriorityQueue.
+    /// - parameter startingValues: An array of elements to initialize the CMPriorityQueue with.
     public init(ordered: @escaping (Element, Element) -> Bool, startingValues: [Element] = []) {
         heap = CMHeap(order: ordered, startingValues: startingValues)
     }
@@ -36,7 +37,7 @@ extension CMPriorityQueue {
     
     /// Remove and return the element with the highest priority (or lowest if ascending). O(lg n)
     ///
-    /// - returns: The element with the highest priority in the Priority Queue, or nil if the MMSPriorityQueue is empty.
+    /// - returns: The element with the highest priority in the Priority Queue, or nil if the CMPriorityQueue is empty.
     @discardableResult
     public mutating func pop() -> Element? {
         return heap.removePeek()
@@ -44,7 +45,7 @@ extension CMPriorityQueue {
     
     // Get a look at the current highest priority item, without removing it. O(1)
     ///
-    /// - returns: The element with the highest priority in the MMSPriorityQueue, or nil if the MMSPriorityQueue is empty.
+    /// - returns: The element with the highest priority in the CMPriorityQueue, or nil if the CMPriorityQueue is empty.
     public func peek() -> Element? {
         return heap.peek
     }

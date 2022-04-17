@@ -1,5 +1,5 @@
 //
-//  MMSEmail.swift
+//  CMEmail.swift
 //  CustomKit
 //
 //  Created by yao.tiancheng on 04/17/2022.
@@ -12,10 +12,10 @@ import Foundation
 ///
 /// 使用方式
 ///
-/// @MMSEmail
+/// @CMEmail
 /// var name1: String = "momo@immomo.com"
 ///
-/// @MMSEmail
+/// @CMEmail
 /// var name2: String = "momo"
 ///
 /// print("\(name1) Empty: \(name1.isEmpty)")： momo@immomo.com isEmpty: false

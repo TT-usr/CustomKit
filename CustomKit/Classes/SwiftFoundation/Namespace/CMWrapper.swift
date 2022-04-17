@@ -1,5 +1,5 @@
 //
-//  MMS.swift
+//  CMS.swift
 //  CustomKit
 //
 //  Created by yao.tiancheng on 04/17/2022.
@@ -23,21 +23,21 @@ public protocol CMAny {
 
     associatedtype CMType
 
-    var mms: CMWrapper<CMType> { get set }
+    var cms: CMWrapper<CMType> { get set }
 
-    static var mms: CMWrapper<CMType>.Type { get set }
+    static var cms: CMWrapper<CMType>.Type { get set }
 }
 
 public extension CMAny {
 
-    var mms: CMWrapper<Self> {
+    var cms: CMWrapper<Self> {
         get {
             return CMWrapper(self)
         }
         set { }
     }
 
-    static var mms: CMWrapper<Self>.Type {
+    static var cms: CMWrapper<Self>.Type {
         get {
             return CMWrapper<Self>.self
         }

@@ -1,18 +1,19 @@
 //
-//  MMSWeakSet.swift
-//  MMSBaseFoundation
+//  WeakSet.swift
+//  CustomKit
 //
-//  Created by YinYuGuang on 2021/6/2.
+//  Created by yao.tiancheng on 04/17/2022.
+//  Copyright (c) 2022 yao.tiancheng. All rights reserved.
 //
 
 import Foundation
 
-/// 弱引用的 Set 集合, 不会强持有 Class. 在赋值的时候会自动剔除无用的弱引用，无需关心删除, 不必在 deinit 里面调用. MMSWeakSet 暴露的方法均进行过单元测试
+/// 弱引用的 Set 集合, 不会强持有 Class. 在赋值的时候会自动剔除无用的弱引用，无需关心删除, 不必在 deinit 里面调用. CMWeakSet 暴露的方法均进行过单元测试
 public class CMWeakSet<T: AnyObject> {
     
     public typealias WeakObject = CMWeakObject
     
-    /// 由 Set 集合类型对 T: AnyObject 进行包装处理的集合. 如果进行其它操作建议使用 objects.WeakObject.object, 不建议直接使用 objects.WeakObject. 对 objects 进行操作的时候参考 MMSWeakObject 的数据结构.
+    /// 由 Set 集合类型对 T: AnyObject 进行包装处理的集合. 如果进行其它操作建议使用 objects.WeakObject.object, 不建议直接使用 objects.WeakObject. 对 objects 进行操作的时候参考 CMWeakObject 的数据结构.
     public var objects: Set<WeakObject<T>>
 
     public init() {

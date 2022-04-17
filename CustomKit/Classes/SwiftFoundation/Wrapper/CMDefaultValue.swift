@@ -1,5 +1,5 @@
 //
-//  MMSDefault.swift
+//  CMSDefault.swift
 //  CustomKit
 //
 //  Created by yao.tiancheng on 04/17/2022.

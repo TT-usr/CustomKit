@@ -1,5 +1,5 @@
 //
-//  MMSLossyArray.swift
+//  CMLossyArray.swift
 //  CustomKit
 //
 //  Created by yao.tiancheng on 04/17/2022.

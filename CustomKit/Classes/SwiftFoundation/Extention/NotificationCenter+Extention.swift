@@ -11,7 +11,7 @@ import ObjectiveC
 
 extension NotificationCenter: CMAny {  }
 
-public final class MMSNotificationToken {
+public final class CMNotificationToken {
     private unowned var notificationCenter: NotificationCenter?
     private var token: NSObjectProtocol
     
@@ -29,8 +29,8 @@ public final class MMSNotificationToken {
     }
 }
 
-extension MMSNotificationToken: Hashable {
-    public static func == (lhs: MMSNotificationToken, rhs: MMSNotificationToken) -> Bool {
+extension CMNotificationToken: Hashable {
+    public static func == (lhs: CMNotificationToken, rhs: CMNotificationToken) -> Bool {
         return ObjectIdentifier(lhs.token) == ObjectIdentifier(rhs.token)
     }
     
@@ -60,9 +60,9 @@ public extension CMWrapper where T == NotificationCenter {
         object obj: Any?,
         queue: OperationQueue?,
         using block: @escaping (Notification) -> Void
-    ) -> MMSNotificationToken {
+    ) -> CMNotificationToken {
         let token = self.base.addObserver(forName: name, object: obj, queue: queue, using: block)
-        return MMSNotificationToken(notificationCenter: self.base, token: token)
+        return CMNotificationToken(notificationCenter: self.base, token: token)
     }
     
     /// 自动移除token的通知(Observer析构时)
@@ -74,7 +74,7 @@ public extension CMWrapper where T == NotificationCenter {
         using block: @escaping (Notification) -> Void
     ) {
         let token = self.base.addObserver(forName: name, object: obj, queue: queue, using: block)
-        let notificationToken = MMSNotificationToken(notificationCenter: self.base, token: token)
+        let notificationToken = CMNotificationToken(notificationCenter: self.base, token: token)
         //print("1 = ", withUnsafePointer(to: &NotificationTokenKey, { $0 }))
         tokens(observer).add(notificationToken)
     }

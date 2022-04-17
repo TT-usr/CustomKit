@@ -1,8 +1,9 @@
 //
-//  MMSStack.swift
-//  MMSBaseFoundation
+//  CMStack.swift
+//  CustomKit
 //
-//  Created by Jack on 2021/2/7.
+//  Created by yao.tiancheng on 04/17/2022.
+//  Copyright (c) 2022 yao.tiancheng. All rights reserved.
 //
 
 import Foundation
@@ -16,11 +17,11 @@ extension CMStack: CustomStringConvertible {
     var description: String {
         let topDivider = "====top====\n"
         let bottomDivider = "\n====bottom====\n"
-        let MMSStackElements = elements
+        let CMStackElements = elements
             .reversed()
             .map { "\($0)" }
             .joined(separator: "\n")
-        return topDivider + MMSStackElements + bottomDivider
+        return topDivider + CMStackElements + bottomDivider
     }
 }
 

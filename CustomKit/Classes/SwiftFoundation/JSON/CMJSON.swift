@@ -1,8 +1,9 @@
 //
 //  CMJSON.swift
-//  MMSBaseFoundation
+//  CustomKit
 //
-//  Created by Zero.D.Saber on 2020/12/18.
+//  Created by yao.tiancheng on 04/17/2022.
+//  Copyright (c) 2022 yao.tiancheng. All rights reserved.
 //
 /**
  基于dynamicMemberLookup、枚举关联、ExpressibleByLiteral实现

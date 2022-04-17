@@ -160,12 +160,12 @@ public extension Collection {
     }
 }
 
-public protocol MMSAnyOptional {
+public protocol CMAnyOptional {
     var isNil: Bool { get }
 }
 
 /// 判断可选值是否为 nil
 /// nil: true
-public extension Optional where Wrapped: MMSAnyOptional {
+public extension Optional where Wrapped: CMAnyOptional {
     var isNil: Bool { self == nil }
 }

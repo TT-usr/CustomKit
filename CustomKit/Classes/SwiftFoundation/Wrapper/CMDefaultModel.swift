@@ -91,7 +91,7 @@ struct CMEmptySingleValueDecoder: Decoder {
     }
     
     func unkeyedContainer() throws -> UnkeyedDecodingContainer {
-        return MMSEmptyUnkeyedDecodingContainer(minimumMode: minimumMode,
+        return CMEmptyUnkeyedDecodingContainer(minimumMode: minimumMode,
                                                 codingPath: codingPath,
                                                 userInfo: userInfo)
     }
@@ -169,7 +169,7 @@ extension CMEmptySingleValueDecoder: SingleValueDecodingContainer {
     }
 }
 
-struct MMSEmptyUnkeyedDecodingContainer: UnkeyedDecodingContainer {
+struct CMEmptyUnkeyedDecodingContainer: UnkeyedDecodingContainer {
     
     let minimumMode: Bool
     
@@ -279,7 +279,7 @@ struct MMSEmptyUnkeyedDecodingContainer: UnkeyedDecodingContainer {
     }
     
     mutating func nestedUnkeyedContainer() throws -> UnkeyedDecodingContainer {
-        let ret = MMSEmptyUnkeyedDecodingContainer(minimumMode: minimumMode,
+        let ret = CMEmptyUnkeyedDecodingContainer(minimumMode: minimumMode,
                                                    codingPath: codingPath + [CMCodingKey(intValue: currentIndex)],
                                                    userInfo: userInfo)
         currentIndex += 1
@@ -383,7 +383,7 @@ struct ZeroKeyedDecodingContainer<K: CodingKey>: KeyedDecodingContainerProtocol 
     
     func nestedUnkeyedContainer(forKey key: K) throws -> UnkeyedDecodingContainer {
         
-        return MMSEmptyUnkeyedDecodingContainer(minimumMode: minimumMode,
+        return CMEmptyUnkeyedDecodingContainer(minimumMode: minimumMode,
                                             codingPath: codingPath + [key],
                                             userInfo: userInfo)
     }

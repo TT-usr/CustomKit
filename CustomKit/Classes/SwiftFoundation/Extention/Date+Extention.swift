@@ -8,9 +8,9 @@
 
 import Foundation
 
-private var MMSDateFormatDict = [String: DateFormatter]()
+private var CMDateFormatDict = [String: DateFormatter]()
 
-public enum MMSDateFormat: String {
+public enum CMDateFormat: String {
 
     case all = "yyyy-MM-dd HH:mm:ss:SS"
     case allOther = "yyyy-MM-dd HH:mm:ss.SS"
@@ -24,12 +24,12 @@ public enum MMSDateFormat: String {
     case monthDay = "MM-dd"
 
     fileprivate func getDateFormat() -> DateFormatter {
-        if let formattter = MMSDateFormatDict[self.rawValue] {
+        if let formattter = CMDateFormatDict[self.rawValue] {
             return formattter
         } else {
             let formattter = DateFormatter()
             formattter.dateFormat = self.rawValue
-            MMSDateFormatDict[self.rawValue] = formattter
+            CMDateFormatDict[self.rawValue] = formattter
             return formattter
         }
     }
@@ -55,7 +55,7 @@ public extension CMWrapper where T == Date {
     
     /// 时间戳转字符串
     /// - timeIsMill 传入时间为毫秒级/var/folders/cocoapods/MOMO_iOS_Binary/Pods/ArgoUI/0.3.4.a.debug.11/MLN-iOS
-    static func timeIntervalToString(time: Int, dateFormat: MMSDateFormat, timeIsMill: Bool = false) -> String {
+    static func timeIntervalToString(time: Int, dateFormat: CMDateFormat, timeIsMill: Bool = false) -> String {
         var resultTime = time
         if timeIsMill {
             resultTime /= 1000
@@ -67,7 +67,7 @@ public extension CMWrapper where T == Date {
     }
     
     /// 字符串转时间戳
-    static func timeStringToInterval(timeStr: String?, dateFormat: MMSDateFormat) -> String {
+    static func timeStringToInterval(timeStr: String?, dateFormat: CMDateFormat) -> String {
         guard let timeString = timeStr, !timeString.isEmpty else {
             return ""
         }

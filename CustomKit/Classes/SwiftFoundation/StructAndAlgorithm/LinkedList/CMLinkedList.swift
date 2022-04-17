@@ -1,8 +1,9 @@
 //
-//  MMSLinkedList.swift
-//  MMSBaseFoundation
+//  CMLinkedList.swift
+//  CustomKit
 //
-//  Created by Jack on 2021/2/8.
+//  Created by yao.tiancheng on 04/17/2022.
+//  Copyright (c) 2022 yao.tiancheng. All rights reserved.
 //
 
 import Foundation
@@ -24,7 +25,7 @@ extension CMLinkedListNode: CustomStringConvertible {
     }
 }
 
-// MARK: - MMSLinkedList
+// MARK: - CMLinkedList
 struct CMLinkedList<T> {
     var head: CMLinkedListNode<T>?
     var tail: CMLinkedListNode<T>?
