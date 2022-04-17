@@ -7,6 +7,8 @@ target 'CustomKit_Example' do
   pod 'CustomKit', :path => '../'
   
   pod 'CMCommonModuleMediator', :path => '../'
+  
+  pod 'CMSBaseFoundation', :path => '../'
 
   target 'CustomKit_Tests' do
     inherit! :search_paths

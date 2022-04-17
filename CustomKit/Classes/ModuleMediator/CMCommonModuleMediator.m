@@ -12,7 +12,7 @@
 #import "CMCommonModuleDefine.h"
 #import <CustomKit/CMInvocation.h>
 #import <objc/runtime.h>
-#import <CustomKit/CMFoundation.h>
+#import <CustomKit/NSArray+CMSafe.h>
 
 #define CMCommonModulePerformVCMethod(vc, method) \
 for (id<CMCommonModuleProtocol> obj in ws.modulesDict.allValues) { \

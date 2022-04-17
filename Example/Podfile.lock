@@ -3,6 +3,7 @@ PODS:
   - CMCommonModuleMediator (0.0.1):
     - Aspects
     - CustomKit
+  - CMSBaseFoundation (0.0.13)
   - CustomKit (0.1.0):
     - CustomKit/Header (= 0.1.0)
     - CustomKit/Invocation (= 0.1.0)
@@ -48,6 +49,7 @@ PODS:
 
 DEPENDENCIES:
   - CMCommonModuleMediator (from `../`)
+  - CMSBaseFoundation (from `../`)
   - CustomKit (from `../`)
   - FBSnapshotTestCase (~> 2.1.4)
 
@@ -59,15 +61,18 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   CMCommonModuleMediator:
     :path: "../"
+  CMSBaseFoundation:
+    :path: "../"
   CustomKit:
     :path: "../"
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CMCommonModuleMediator: 45b58cf97d5d21f9ac523af2878b923939b454e7
+  CMSBaseFoundation: 7306b2a43223fe4ba00b3ee8a8ef3988adfb2d06
   CustomKit: 7e060bdb5d12e2750b71063a7de3bdd73b71aff0
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
-PODFILE CHECKSUM: ad8a11e88d802025bf0c2cb6433347342d5ad466
+PODFILE CHECKSUM: 4c25007d5b0b176336772c8244e357082ce207af
 
 COCOAPODS: 1.11.2
