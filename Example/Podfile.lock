@@ -1,0 +1,73 @@
+PODS:
+  - Aspects (1.4.1)
+  - CMCommonModuleMediator (0.0.1):
+    - Aspects
+    - CustomKit
+  - CustomKit (0.1.0):
+    - CustomKit/Header (= 0.1.0)
+    - CustomKit/Invocation (= 0.1.0)
+    - CustomKit/JSON (= 0.1.0)
+    - CustomKit/NSArray (= 0.1.0)
+    - CustomKit/NSData (= 0.1.0)
+    - CustomKit/NSDate (= 0.1.0)
+    - CustomKit/NSDictionary (= 0.1.0)
+    - CustomKit/NSFileManager (= 0.1.0)
+    - CustomKit/NSNull (= 0.1.0)
+    - CustomKit/NSObject (= 0.1.0)
+    - CustomKit/NSSet (= 0.1.0)
+    - CustomKit/NSString (= 0.1.0)
+  - CustomKit/Header (0.1.0)
+  - CustomKit/Invocation (0.1.0):
+    - CustomKit/Header
+  - CustomKit/JSON (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSArray (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSData (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSDate (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSDictionary (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSFileManager (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSNull (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSObject (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSSet (0.1.0):
+    - CustomKit/Header
+  - CustomKit/NSString (0.1.0):
+    - CustomKit/Header
+    - CustomKit/NSDictionary
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - CMCommonModuleMediator (from `../`)
+  - CustomKit (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+
+SPEC REPOS:
+  trunk:
+    - Aspects
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  CMCommonModuleMediator:
+    :path: "../"
+  CustomKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CMCommonModuleMediator: 45b58cf97d5d21f9ac523af2878b923939b454e7
+  CustomKit: 7e060bdb5d12e2750b71063a7de3bdd73b71aff0
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: ad8a11e88d802025bf0c2cb6433347342d5ad466
+
+COCOAPODS: 1.11.2
