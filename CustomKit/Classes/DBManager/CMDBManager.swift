@@ -8,18 +8,18 @@
 import Foundation
 import WCDBSwift
 
-class DBmanager {
+class CMDBManager {
 
     static let basePath =  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/DB/wcdb.db"
     
-    static let share = DBmanager.init()
+    static let share = CMDBManager.init()
     var db: Database?
     
     init() {
         db = createDB()
     }
     
-    private func createDB(path: String = DBmanager.basePath) -> Database {
+    private func createDB(path: String = CMDBManager.basePath) -> Database {
         return Database(withPath: path)
     }
     
