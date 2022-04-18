@@ -3,6 +3,8 @@ PODS:
   - CMCommonModuleMediator (0.0.1):
     - Aspects
     - CustomKit
+  - CMDBManager (0.0.1):
+    - WCDB.swift
   - CMSBaseFoundation (0.0.13)
   - CustomKit (0.1.0):
     - CustomKit/Header (= 0.1.0)
@@ -46,9 +48,16 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDB.swift (1.0.8.2):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
 
 DEPENDENCIES:
   - CMCommonModuleMediator (from `../`)
+  - CMDBManager (from `../`)
   - CMSBaseFoundation (from `../`)
   - CustomKit (from `../`)
   - FBSnapshotTestCase (~> 2.1.4)
@@ -57,9 +66,14 @@ SPEC REPOS:
   trunk:
     - Aspects
     - FBSnapshotTestCase
+    - SQLiteRepairKit
+    - WCDB.swift
+    - WCDBOptimizedSQLCipher
 
 EXTERNAL SOURCES:
   CMCommonModuleMediator:
+    :path: "../"
+  CMDBManager:
     :path: "../"
   CMSBaseFoundation:
     :path: "../"
@@ -69,10 +83,14 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CMCommonModuleMediator: 45b58cf97d5d21f9ac523af2878b923939b454e7
+  CMDBManager: 880e07c232f38d7d04aae6f9d837be99ec962bb2
   CMSBaseFoundation: 7306b2a43223fe4ba00b3ee8a8ef3988adfb2d06
   CustomKit: 7e060bdb5d12e2750b71063a7de3bdd73b71aff0
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  WCDB.swift: 05d509d7a0e60fb6e11c34eb7e4027c0fab5849f
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
 
-PODFILE CHECKSUM: 4c25007d5b0b176336772c8244e357082ce207af
+PODFILE CHECKSUM: 69f3f7ae1875a7bac32bb78ae73fb04ed53c887f
 
 COCOAPODS: 1.11.2
