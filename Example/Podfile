@@ -11,6 +11,8 @@ target 'CustomKit_Example' do
   pod 'CMSBaseFoundation', :path => '../'
   
   pod 'CMDBManager', :path => '../'
+  
+  pod 'CMTools', :path => '../'
 
   target 'CustomKit_Tests' do
     inherit! :search_paths

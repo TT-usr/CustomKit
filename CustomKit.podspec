@@ -107,10 +107,18 @@ Pod::Spec.new do |s|
     s.source_files        = 'CustomKit/Classes/Foundation/NSNull/**/*.{h,m}'
     s.dependency 'CustomKit/Header'
   end
+  
   s.subspec 'Invocation' do |s|
     s.name                = 'Invocation'
     s.frameworks          = 'Foundation'
     s.source_files        = 'CustomKit/Classes/Foundation/Invocation/**/*.{h,m}'
+    s.dependency 'CustomKit/Header'
+  end
+  
+  s.subspec 'Device' do |s|
+    s.name                = 'Device'
+    s.frameworks          = 'UIKit'
+    s.source_files        = 'CustomKit/Classes/Foundation/Device/**/*.{h,m}'
     s.dependency 'CustomKit/Header'
   end
 end

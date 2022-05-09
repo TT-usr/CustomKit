@@ -73,4 +73,9 @@
 #import <Foundation/CMJSONHelper.h>
 #endif
 
+#if __has_include(<Foundation/CMDevices.h>)
+#import <Foundation/CMDevices.h>
+#endif
+
+
 #endif /* Foundation_h */
